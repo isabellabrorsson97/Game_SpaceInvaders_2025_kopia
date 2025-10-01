@@ -12,7 +12,7 @@ namespace Game_SpaceInvaders_2025
     internal class Bullet
     {
 
-        public Rectangle Position;                  //Postion bullet
+        public Rectangle Position;                      //Postion bullet
         public Color Color = Color.Red;
         public int speed = 3;                           //Hastighet Bullet
 

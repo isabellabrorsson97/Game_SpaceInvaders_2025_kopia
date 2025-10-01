@@ -16,20 +16,38 @@ namespace Game_SpaceInvaders_2025
         private SpriteBatch spriteBatch;
 
         public Rectangle Position;
-        public Color Color = Color.Green;
-        public int speed = 1;                           //Hastighet i y-led
+        public Color Color;
+        public int speed = 2;                                                                   //Hastighet i y-led
         public bool enemyisalive = true;
+        public int Score;
+        public int startX;
+        public enum Direction
+        {
+            Left, Down, Right
+        }
+        public Direction direction;                                                              //Riktning X & Y
+        public Direction cameFrom;                                                              //Riktning X rektangel senast vart på
+        public int lastY;                                                                       //Position Y rektangel senast vart på
+        private int windowWidth;
+        public bool enemyHitside = false;
 
-
-        public Enemy(Rectangle position)
+        public Enemy(Rectangle position, Color color, int score, int windowWidth, int startX)
         {
             this.Position = position;
+            this.Color = color;
+            this.Score = score;
+            this.windowWidth = windowWidth;
+            this.startX = startX;
+
         }
 
         public void Update(GameTime gameTime)
         {
-            Position = new Rectangle(Position.X, Position.Y + speed, Position.Width, Position.Height);
+            if (enemyisalive)
+            {
+                Position.X += speed;
 
+            }
             // TODO: Add your update logic here
         }
 
@@ -47,12 +65,6 @@ namespace Game_SpaceInvaders_2025
 
 
     }
-
-
-
-
-
-
 
 
 }

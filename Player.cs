@@ -13,9 +13,9 @@ namespace Game_SpaceInvaders_2025
     {
         private GraphicsDeviceManager graphics;
         private SpriteBatch spriteBatch;
-        public Texture2D PlayerShip;                                        //Player content
-        public Vector2 position2;                                           //Player position
-        public float ringsSpeed;                                            //Player movement
+        private Texture2D PlayerShip;                                                   //Player content
+        public Vector2 position2;                                                       //Player position
+        public float ringsSpeed;                                                       //Player movement
 
         public Player(Vector2 position, Texture2D player, float speed)
         {
@@ -27,7 +27,7 @@ namespace Game_SpaceInvaders_2025
         public void Update(GameTime gameTime)
         {
 
-            KeyboardState keyboardState = Keyboard.GetState();                      //Keyboard
+            KeyboardState keyboardState = Keyboard.GetState();                         //Keyboard
             if (keyboardState.IsKeyDown(Keys.Left))
                 position2.X -= ringsSpeed;
             if (keyboardState.IsKeyDown(Keys.Right))
