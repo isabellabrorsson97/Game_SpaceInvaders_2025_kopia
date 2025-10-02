@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using static Game_SpaceInvaders_2025.Enemy;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
-// new version
+
 namespace Game_SpaceInvaders_2025
 {
     public class Game1 : Game
