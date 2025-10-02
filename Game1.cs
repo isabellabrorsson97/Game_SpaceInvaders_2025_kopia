@@ -149,7 +149,7 @@ namespace Game_SpaceInvaders_2025
 
             pixel2 = new Texture2D(GraphicsDevice, 1, 1);                                                                               //Bullet
             pixel2.SetData(new[] { Color.White });
-            screenImage = Content.Load<Texture2D>("space_light");                               
+            screenImage = Content.Load<Texture2D>("arcadebackground");                               
             animation = Content.Load<Texture2D>("explotion01_sprites");
             StartKnapp = Content.Load<Texture2D>("Startknapp");
             explosion = Content.Load<Texture2D>("explosion");
@@ -390,7 +390,7 @@ namespace Game_SpaceInvaders_2025
                     spriteBatch.End();
                     break;
             }
-            
+             
             // TODO: Add your drawing code here
 
             base.Draw(gameTime);
